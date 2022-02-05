@@ -46,8 +46,8 @@ public class HairCalculatorBot extends TelegramLongPollingBot {
             sendMsg(message, premium.getPrice(message.getText()));
         }else{
             switch (message.getText()) {
-                case "/start" -> sendMsg(message, "Для вычисления наберите /*категория волос* + *длинна волос* + *количество*" +
-                        "\n Категория волос: \n Премиум (/premium или /p ). \nДеткие (/kids или /k )." +
+                case "/start" -> sendMsg(message, "Для вычисления наберите /категория волос + длинна волос + количество" +
+                        "\n Категория волос: \n *Премиум* (/premium или /p ). \n *Деткие* (/kids или /k )." +
                         "\n Пример: /p 40 3");
 
             }
