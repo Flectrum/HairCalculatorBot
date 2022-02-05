@@ -20,7 +20,7 @@ public class Premium implements HairType {
         }
         double pieces= Double.parseDouble(messages[2]);
         double price = lengthPrice*pieces;
-
-        return String.valueOf(price);
+        String stringPrice = String.format("%.2f", price);
+        return String.valueOf(stringPrice);
     }
 }
