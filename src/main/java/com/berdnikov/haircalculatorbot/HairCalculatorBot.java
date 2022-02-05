@@ -34,17 +34,17 @@ public class HairCalculatorBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
-        return "TOKEN";
+        return System.getenv("TOKEN");
     }
 
     @Override
     public void onUpdateReceived(Update update) {
         Message message = update.getMessage();
-        if(message.getText().startsWith("/kids") || message.getText().startsWith("/k")){
+        if (message.getText().startsWith("/kids") || message.getText().startsWith("/k")) {
             sendMsg(message, kids.getPrice(message.getText()));
-        }else if(message.getText().startsWith("/premium")|| message.getText().startsWith("/p")){
+        } else if (message.getText().startsWith("/premium") || message.getText().startsWith("/p")) {
             sendMsg(message, premium.getPrice(message.getText()));
-        }else{
+        } else {
             switch (message.getText()) {
                 case "/start" -> sendMsg(message, "Для вычисления наберите /категория волос + длинна волос + количество" +
                         "\n Категория волос: \n *Премиум* (/premium или /p ). \n *Деткие* (/kids или /k )." +
