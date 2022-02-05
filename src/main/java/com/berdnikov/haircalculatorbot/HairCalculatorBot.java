@@ -34,7 +34,7 @@ public class HairCalculatorBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
-        return "5208120023:AAHQtreQWJsYhTsHyNe01r9MAiThuE86c2k";
+        return "TOKEN";
     }
 
     @Override
